@@ -1,0 +1,13 @@
+.Camara{
+    color: white;
+    width: 160px;
+    height: 80px;
+    background-color: #009e81;
+    border-style: solid;
+    border-color: snow;
+    margin: 5px;
+}
+.Camara:hover{
+    width: 200px;
+    height: 120px;
+}

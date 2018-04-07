@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import CamaraItem from './CamaraItem';
+import './css/Camaras.css';
 
 class Camaras extends Component {
     render() {
