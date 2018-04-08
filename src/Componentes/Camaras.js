@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Panel} from 'react-bootstrap';
 import CamaraItem from './CamaraItem';
 import './css/Camaras.css';
 
@@ -13,10 +14,12 @@ class Camaras extends Component {
             });
         }
         return (
-            <div className="Camaras">
-                <p>Camaras</p><br />
-                {camaraItems}
-            </div>
+            <Panel bsStyle="primary text-center">
+                <Panel.Heading>
+                <Panel.Title componentClass="h3">Camaras</Panel.Title>
+                </Panel.Heading>
+                <Panel.Body>{camaraItems}</Panel.Body>
+            </Panel>
         );
     }
 }

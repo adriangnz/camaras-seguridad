@@ -1,4 +1,4 @@
-.Camara{
+/*.Camara{
     color: white;
     width: 160px;
     height: 80px;
@@ -10,4 +10,8 @@
 .Camara:hover{
     width: 200px;
     height: 120px;
+}*/
+
+.btn-toolbar {
+    display: inline-block;
 }
