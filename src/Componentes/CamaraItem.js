@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import {Grid, Row, Col, Well, Button, ButtonToolbar} from 'react-bootstrap';
-import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import {Col, Button, ButtonToolbar} from 'react-bootstrap';
 import MyLargeModal from './Modal.js';
-import './css/CamaraItem.css';
 
 class CamaraItem extends Component {
     constructor(props, context) {
@@ -16,18 +14,21 @@ class CamaraItem extends Component {
     render() {
         let lgClose = () => this.setState({ lgShow: false });
         return (
-            <Col xs={12} sm={4}>
-                <Well>
+            <Col xs={12} sm={4} lg={3}>
+                {/* <Well> */}
                     <ButtonToolbar> 
                         <Button
+                        className="boton-camara"
                         bsStyle="primary"
                         onClick={() => this.setState({ lgShow: true })}
                         >
                         {this.props.camara.nombre}: {this.props.camara.lugar}
+                        <br />
+                        <img src={this.props.camara.src} alt={this.props.camara.nombre} className="Fuente"></img>
                         </Button>
-                        <MyLargeModal show={this.state.lgShow} onHide={lgClose} />
+                        <MyLargeModal show={this.state.lgShow} onHide={lgClose} camara={this.props.camara}/>
                     </ButtonToolbar>
-                </Well>
+                {/* </Well> */}
             </Col>
         );
     }
