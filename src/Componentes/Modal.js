@@ -40,7 +40,6 @@ class MyLargeModal extends React.Component {
                 <ControlLabel>Descripcion</ControlLabel>{' '}
                 <FormControl type="text" placeholder="Una breve descripcion" name="lugar" onChange={e => this.change(e)} />
               </FormGroup>{' '}
-              <Button type="submit" bsStyle="primary float-xs-right">Modificar</Button>
             </Form>         
           </Modal.Footer>
         </Modal>
