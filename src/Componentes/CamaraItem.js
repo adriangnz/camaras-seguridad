@@ -14,17 +14,16 @@ class CamaraItem extends Component {
     render() {
         let lgClose = () => this.setState({ lgShow: false });
         return (
-            <Col xs={12} sm={4} lg={3}>
+            <Col xs={12} sm={6} md={4} lg={3}>
                 {/* <Well> */}
                     <ButtonToolbar> 
-                        <Button
-                        className="boton-camara"
-                        bsStyle="primary"
-                        onClick={() => this.setState({ lgShow: true })}
-                        >
+                        <Button className="boton-camara" bsStyle="primary" onClick={() => this.setState({ lgShow: true })}>
                         {this.props.camara.nombre}: {this.props.camara.lugar}
                         <br />
-                        <img src={this.props.camara.src} alt={this.props.camara.nombre} className="Fuente"></img>
+
+                        <div bsStyle="gif-parent">
+                            <img src={this.props.camara.src} alt={this.props.camara.nombre} width="100%" height="100%" bsStyle="gif-child" ></img>
+                        </div>
                         </Button>
                         <MyLargeModal show={this.state.lgShow} onHide={lgClose} camara={this.props.camara}/>
                     </ButtonToolbar>

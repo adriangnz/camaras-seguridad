@@ -1,5 +1,5 @@
 import React from 'react';
-import {Modal, Button} from 'react-bootstrap';
+import {Modal, Button, Form, FormGroup, FormControl, ControlLabel} from 'react-bootstrap';
 
 
 class MyLargeModal extends React.Component {
@@ -23,30 +23,25 @@ class MyLargeModal extends React.Component {
         <Modal
           {...this.props}
           bsSize="large"
-          aria-labelledby="contained-modal-title-lg"
-        >
+          aria-labelledby="contained-modal-title-lg">  
           <Modal.Header closeButton>
             <Modal.Title id="contained-modal-title-lg" className="text-center">{this.state.nombre}: {this.state.lugar}</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <img src={this.props.camara.src} alt={this.props.camara.nombre} className="Fuente"></img>
+            <img src={this.props.camara.src} alt={this.props.camara.nombre} className="fuente"></img>
           </Modal.Body>
           <Modal.Footer>
-   
-                <label>Identificador:</label>
-                <input
-                    name="nombre"
-                    placeholder="First name"
-                    onChange={e => this.change(e)}
-                  />
-                <label>Descripcion:</label>
-                <input
-                    name="lugar"
-                    placeholder="lugar"
-                    onChange={e => this.change(e)}
-                  />
-       
-            <Button onClick={this.props.onHide}>Close</Button>
+            <Form inline >
+              <FormGroup controlId="formInlineName">
+                <ControlLabel>Identificador</ControlLabel>{' '}
+                <FormControl type="text" placeholder="1" name="nombre" onChange={e => this.change(e)} />
+              </FormGroup>{' '}
+              <FormGroup controlId="formInlineEmail">
+                <ControlLabel>Descripcion</ControlLabel>{' '}
+                <FormControl type="text" placeholder="Una breve descripcion" name="lugar" onChange={e => this.change(e)} />
+              </FormGroup>{' '}
+              <Button type="submit" bsStyle="primary float-xs-right">Modificar</Button>
+            </Form>         
           </Modal.Footer>
         </Modal>
       );

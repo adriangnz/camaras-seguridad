@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import CamaraItem from './CamaraItem';
+import {Row} from 'react-bootstrap';
 
 class Camaras extends Component {
     render() {

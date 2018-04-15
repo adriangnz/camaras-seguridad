@@ -2,6 +2,15 @@ import React, { Component } from 'react';
 import {Grid, PageHeader} from 'react-bootstrap';
 import Camaras from './Componentes/Camaras';
 import './App.css';
+import computacion from './Gifs/computacion.gif';
+import eca from './Gifs/eca.gif';
+import civil from './Gifs/civil.gif';
+import portones from './Gifs/portones.gif';
+import decanato from './Gifs/decanato.gif';
+import basico from './Gifs/basico.gif';
+import ruta from './Gifs/ruta.gif';
+import salon from './Gifs/salon.gif';
+import cancha from './Gifs/cancha.gif';
 
 class App extends Component {
   constructor(){
@@ -15,48 +24,48 @@ class App extends Component {
     this.setState({camaras: [
       {
         nombre: 'Camara 1',
-        lugar: 'La Plaza Via Básico',
-        src: 'https://media.giphy.com/media/8Ry7iAVwKBQpG/giphy.gif'
+        lugar: 'Computacion',
+        src: computacion
       },
       {
         nombre: 'Camara 2',
-        lugar: 'Cama',
-        src: 'https://media.giphy.com/media/N97kHQgG33rUI/giphy.gif'
+        lugar: 'Eca',
+        src: eca
       },
       {
         nombre: 'Camara 3',
-        lugar: 'Río Neverí',
-        src: 'https://media.giphy.com/media/G697nfhYHcCk0/giphy.gif'
+        lugar: 'Civil',
+        src: civil
       },
       {
         nombre: 'Camara 4',
-        lugar: 'Plaza Central',
-        src: 'https://media.giphy.com/media/9r3mtPn0arLJ227VjZ/giphy.gif'
+        lugar: 'Basico',
+        src: basico
       },
       {
         nombre: 'Camara 5',
-        lugar: 'Comedor',
-        src: 'https://media.giphy.com/media/l2Rnmi9V7FlV4E5u8/giphy.gif'
+        lugar: 'Ruta',
+        src: ruta
       },
       {
         nombre: 'Camara 6',
         lugar: 'Salon',
-        src: 'https://media.giphy.com/media/3o7qiZd2ORhXiqoEDe/giphy.gif'
+        src: salon
       },
       {
         nombre: 'Camara 7',
-        lugar: 'Intercomunal Vistamal',
-        src: 'https://media.giphy.com/media/RW9sy8IngoQQU/giphy.gif'
+        lugar: 'Decanato',
+        src: decanato
       },
       {
         nombre: 'Camara 8',
-        lugar: 'Computación',
-        src: 'https://media.giphy.com/media/OfU6ebkq1vDNK/giphy.gif'
+        lugar: 'Cancha',
+        src: cancha
       },
       {
         nombre: 'Camara 9',
-        lugar: 'Básico',
-        src: 'https://media.giphy.com/media/OwCbA2vTn85EI/giphy.gif'
+        lugar: 'Entrada',
+        src: portones
       },
     ]});
   }
